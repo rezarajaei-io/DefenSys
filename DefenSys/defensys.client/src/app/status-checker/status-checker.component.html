@@ -1,0 +1,9 @@
+<div>
+  <button (click)="checkApiStatus()">Check API Status</button>
+  <p *ngIf="apiStatus">
+    <strong>API Response:</strong> {{ apiStatus }}
+  </p>
+  <p *ngIf="errorMessage" style="color: red;">
+    <strong>Error:</strong> {{ errorMessage }}
+  </p>
+</div>

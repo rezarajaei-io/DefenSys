@@ -1,0 +1,6 @@
+@DefenSys.Server_HostAddress = http://localhost:5068
+
+GET {{DefenSys.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
