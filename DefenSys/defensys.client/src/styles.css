@@ -1,4 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+/* Reset browser default styles for a full-page app feel */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* Optional: Set a base background color to match our theme */
+  /* This prevents any white flicker on load */
+  background-color: #111827; /* This is Tailwind's gray-900 color */
+}
+
+
+/* Tailwind directives should come after the reset */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

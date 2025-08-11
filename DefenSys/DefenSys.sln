@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36310.24 d17.14
+VisualStudioVersion = 17.14.36310.24
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "defensys.client", "defensys.client\defensys.client.esproj", "{EBE44025-193D-AED8-BE58-00C01A2E8166}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefenSys.Server", "DefenSys.Server\DefenSys.Server.csproj", "{5E4B4215-2C9E-4111-BF59-470935BC9D61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefenSys.Core", "DefenSys.Core\DefenSys.Core.csproj", "{C015D236-6027-47CB-914F-6E9ACD3C0352}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefenSys.Application", "DefenSys.Application\DefenSys.Application.csproj", "{97323C74-6FFB-4820-8245-DA6CBA589FA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +27,14 @@ Global
 		{5E4B4215-2C9E-4111-BF59-470935BC9D61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E4B4215-2C9E-4111-BF59-470935BC9D61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E4B4215-2C9E-4111-BF59-470935BC9D61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C015D236-6027-47CB-914F-6E9ACD3C0352}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C015D236-6027-47CB-914F-6E9ACD3C0352}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C015D236-6027-47CB-914F-6E9ACD3C0352}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C015D236-6027-47CB-914F-6E9ACD3C0352}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97323C74-6FFB-4820-8245-DA6CBA589FA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97323C74-6FFB-4820-8245-DA6CBA589FA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97323C74-6FFB-4820-8245-DA6CBA589FA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97323C74-6FFB-4820-8245-DA6CBA589FA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
