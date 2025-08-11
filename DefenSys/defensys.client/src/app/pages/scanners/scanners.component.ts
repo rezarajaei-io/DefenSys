@@ -39,32 +39,29 @@ export class ScannersComponent {
     this.selectedScanner = null;
   }
 
-  // This function is called when the "Scan" button is clicked.
-  onScanButtonClick() {
+  // This is our new, more generic scan function.
+  // It takes the API endpoint as a parameter.
+  performScan(apiEndpoint: string) {
     if (!this.targetUrl) {
       alert('Please enter a target URL.');
       return;
     }
 
     this.isLoading = true;
-    this.scanResult = null; // Clear previous results
+    this.scanResult = null;
 
     const requestBody = { url: this.targetUrl };
 
-    // Send a POST request to our backend API.
-    // NOTE: Update the URL if your backend runs on a different port.
-    this.http.post<ScanResult>('/api/sqlinjection/scan', requestBody)
+    this.http.post<ScanResult>(apiEndpoint, requestBody)
       .subscribe({
         next: (result) => {
-          // This runs when the API call is successful
           this.scanResult = result;
           this.isLoading = false;
         },
         error: (err) => {
-          // This runs if the API call fails
           console.error('API call failed:', err);
           this.scanResult = {
-            isVulnerable: false, // Or handle as an unknown state
+            isVulnerable: false,
             message: 'An error occurred while communicating with the API.'
           };
           this.isLoading = false;
@@ -72,3 +69,4 @@ export class ScannersComponent {
       });
   }
 }
+
