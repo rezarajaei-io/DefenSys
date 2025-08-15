@@ -9,11 +9,23 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddSwaggerGen();
-builder.Services.AddHttpClient();
+
+// Configure the default HttpClient to not use any system proxy.
+builder.Services.AddHttpClient(Microsoft.Extensions.Options.Options.DefaultName)
+    .ConfigurePrimaryHttpMessageHandler(() =>
+    {
+        return new HttpClientHandler
+        {
+            UseProxy = false
+        };
+    });
+
 #region DI
 // Register the custom service for dependency injection.
 // We use AddScoped, which creates one instance per HTTP request.
 builder.Services.AddScoped<ISqlInjectionService, SqlInjectionService>();
+builder.Services.AddScoped<IXssScannerService, XssScannerService>();
+builder.Services.AddScoped<ICommandInjectionScannerService, CommandInjectionScannerService>();
 #endregion
 // --- 1. Add CORS services to the container ---
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
